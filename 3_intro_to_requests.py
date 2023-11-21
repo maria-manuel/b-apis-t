@@ -19,16 +19,12 @@ print('------------ Challenge 1')
 #-----------------------------
 
 
-
 import requests
 response = requests.get('https://en.wikipedia.org/wiki/Main_Page')
 html_code = response.text
 for line in html_code.splitlines():
-   if '<title>' in line:
+   if 'sarcophagus' in line:
        print(line)
-
-
-
 
 
 print('------------ Challenge 2')
@@ -41,7 +37,11 @@ print('------------ Challenge 2')
 # think too hard about this), and print out the line of code that contains
 # that.
 
-
+response = requests.get('https://en.wikipedia.org/wiki/Main_Page')
+html_code = response.text
+for line in html_code.splitlines():
+   if '<title>' in line:
+       print(line)
 
 
 print('------------ Challenge 3')
@@ -49,7 +49,18 @@ print('------------ Challenge 3')
 # Can use Challenge 2 as a guide, and write code to display ALL the lines of
 # source code that displays the "On this day" section of the homepage?
 
+in_section = False
 
+for line in html_code.splitlines():
+    if 'On this day' in line:
+       in_section = True
+
+    if in_section:
+       print(line)
+
+    if 'By email' in line:
+       in_section = False
+       
 
 
 
