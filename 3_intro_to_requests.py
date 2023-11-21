@@ -62,17 +62,26 @@ for line in html_code.splitlines():
        in_section = False
        
 
-
-
 print('------------ Challenge 4')
 # Challenge 4
 # Just from Googling, can you find a way to "clean up" the line of HTML code
 # and only show text before outputting it?
 # Hint: Simplest way:  re.sub(r'<.*?>', '', line)
 
+import re
 
+in_section = False
 
+for line in html_code.splitlines():
+    if 'On this day' in line:
+      in_section = True
 
+    if in_section:
+      text_only = re.sub(r'<.*?>', '', line)
+      print(text_only)
+
+    if 'By email' in line:
+      in_section = False
 
 
 print('------------')
