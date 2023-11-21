@@ -105,8 +105,7 @@ print(results['users'][3]['name'])
 print(results['users'][1]['contact']['phone'])
 
 # 4. Print the bio of Dame Daniel Eathorse
-# print(results)
-
+print(results['users'][1]['personal']['bio'])
 
 print('Challenge 2 -------------')
 # Challenge 2:
