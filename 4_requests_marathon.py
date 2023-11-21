@@ -27,6 +27,10 @@ print('------------ Challenge 2')
 # for item in data:
 #    print(item['title'])
 
+for item in data:
+   if item['title'] == 'My Neighbor Totoro':
+    print(item['release_date'])
+
 
 
 print('------------ Challenge 3')
