@@ -2,6 +2,7 @@
 # can be shut down or changed with little warning. If you encounter such a
 # problem with an API in this activity, be sure to let an instructor know!
 
+print('requests marathon')
 
 import requests
 
@@ -13,9 +14,9 @@ print('------------ Challenge 1')
 # it running.
 
 
-response = requests.get('https://ghibliapi.herokuapp.com/films/')
+response = requests.get('https://ghibliapi.vercel.app/films')
 data = response.json()
-# print(data)
+print(data)
 
 print('------------ Challenge 2')
 # Challenge 2
@@ -23,7 +24,7 @@ print('------------ Challenge 2')
 # the list.
 #
 # Uncomment this code to get going.
-#for item in data:
+# for item in data:
 #    print(item['title'])
 
 
@@ -69,13 +70,13 @@ print('------------ Challenge 5')
 # Hint: This is a tricky one! Experiment with different requests and see what
 # results / errors / messages / etc you get back.
 
-words = [
-    'dev',
-    'webdev',
-    'pythonista',
-    'coder',
-    'hacker',
-]
+# words = [
+#     'dev',
+#     'webdev',
+#     'pythonista',
+#     'coder',
+#     'hacker',
+# ]
 
 
 
