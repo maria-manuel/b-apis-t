@@ -112,8 +112,8 @@ print('Challenge 2 -------------')
 # Write a for-loop to print all the email addresses in the list.
 
 ### MB ###
-for email in results['users']:
-    print(email['contact']['email'])
+# for email in results['users']:
+#     print(email['contact']['email'])
 
 
 ### MM ##
@@ -122,14 +122,18 @@ for email in emails:
     print(email['contact']['email'])
 
 
-
-
 print('Challenge 3 -------------')
 # Challenge 3:
 # Write a for-loop to sum the total account 'total' values for all users and
 # print the result. Repeat for 'withdrawn'.
 
-
+sum_total = 0
+sum_withdrawn = 0
+for user in results['users']:
+    sum_total += user['account']['total']  
+    sum_withdrawn += sum_withdrawn + user['account']['withdrawn']
+    print('Total Sum: ', sum_total)    
+    print('Total Withdrawn: ', sum_withdrawn)
 
 
 print('Challenge 4 -------------')
