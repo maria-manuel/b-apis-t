@@ -162,13 +162,19 @@ print('Challenge 5 -------------')
 # than 40000, containing the org as a key and the account withdrawn as the
 # value.
 
-#orgs = {
-#    user['account']['org']: user['account']['total']
-#    for user in results['users']
-#    if user['account']['total'] > 70000
-#}
-#print(orgs)
+orgs = {
+   user['position']['org']: user['account']['total']
+   for user in results['users']
+   if user['account']['total'] > 70000
+}
+print(orgs)
 
+orgs = {
+   user['position']['org']: user['account']['withdrawn']
+   for user in results['users']
+   if user['account']['withdrawn'] > 40000
+}
+print(orgs)
 
 print('-------------')
 # Bonus Challenge 1:
