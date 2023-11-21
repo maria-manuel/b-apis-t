@@ -146,11 +146,11 @@ print('Challenge 4 -------------')
 # Uncomment the following code. Can you figure out what it is doing? Get it to
 # put all the phone numbers in a list, instead.
 
-#phone_numbers = [
-#    user['position']['org']
-#    for user in results['users']
-#]
-#print(phone_numbers)
+phone_numbers = [
+   user['position']['org']
+   for user in results['users']
+]
+print(phone_numbers)
 
 
 print('Challenge 5 -------------')
